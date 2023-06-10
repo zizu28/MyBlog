@@ -8,6 +8,45 @@ namespace Data
     public class BlogApiJsonDirectAccess : IBlogApi
     {
         BlogApiJsonDirectAccessSetting _option;
+        private List<BlogPost>? _blogPosts;
+        private List<Category>? _categories;
+        private List<Tag>? _tags;
+
+        private void Load<T>(ref List<T>? list, string folder)
+        {
+            if(list == null)
+            {
+                list = new();
+                var fullPath = $@"{_option.DataPath}/{folder}";
+                foreach(var file in Directory.GetFiles(fullPath))
+                {
+                    var json = File.ReadAllText(file);
+                    var bp = JsonSerializer.Deserialize<T>(json);
+                    if(bp != null)
+                    {
+                        list.Add(bp);
+                    }
+                }
+            }
+        }
+
+        private Task LoadBlogPostsAsync()
+        {
+            Load<BlogPost>(ref _blogPosts, _option.BlogPostsFolder);
+            return Task.CompletedTask;
+        }
+
+        private Task LoadTagsAsync()
+        {
+            Load<Tag>(ref _tags, _option.TagsFolder);
+            return Task.CompletedTask;
+        }
+
+        private Task LoadCategoriesAsync()
+        {
+            Load<Category>(ref  _categories, _option.CategoriesFolder);
+            return Task.CompletedTask;
+        }
 
         public BlogApiJsonDirectAccess(IOptions<BlogApiJsonDirectAccessSetting> option)
         {

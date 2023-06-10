@@ -19,8 +19,8 @@ namespace Data.Models.Interfaces
         Task<BlogPost?> SaveBlogPostAsync(BlogPost post);
         Task<Category?> SaveCategoryAsync(Category category);
         Task<Tag?> SaveTagAsync(Tag tag);
-        Task<BlogPost?> DeleteBlogPostAsync(string Id);
-        Task<Category?> DeleteCategoryAsync(string id);
-        Task<Tag?> DeletTagAsync(string Id);
+        Task DeleteBlogPostAsync(string Id);
+        Task DeleteCategoryAsync(string id);
+        Task DeletTagAsync(string Id);
     }
 }

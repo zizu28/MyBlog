@@ -230,5 +230,14 @@ namespace Data
             await SaveAsync<Tag>(_tags, _option.TagsFolder, $"{tag.Id}.json", tag);
             return tag;
         }
+
+        // Method to clear cache
+        public Task InvalidateCacheAsync()
+        {
+            _blogPosts = null;
+            _categories = null;
+            _tags = null;
+            return Task.CompletedTask;
+        }
     }
 }

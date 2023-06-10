@@ -1,6 +1,6 @@
 using BlazorServerTutorial.Data;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+using Data;
+using Data.Models.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +9,15 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+builder.Services.AddOptions<BlogApiJsonDirectAccessSetting>()
+    .Configure(options =>
+    {
+        options.DataPath = @"..\..\..\Data";
+        options.BlogPostsFolder = "BlogPosts";
+        options.CategoriesFolder = "Categories";
+        options.TagsFolder = "Tags";
+    });
+builder.Services.AddScoped<IBlogApi, BlogApiJsonDirectAccess>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerTutorial", "BlazorServerTutorial\BlazorServerTutorial.csproj", "{12169193-01D6-4AD9-8E9B-57E616BF2FCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerTutorial", "BlazorServerTutorial\BlazorServerTutorial.csproj", "{12169193-01D6-4AD9-8E9B-57E616BF2FCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASMTutorial.Server", "BlazorWASMTutorial\Server\BlazorWASMTutorial.Server.csproj", "{BA56D304-E015-4395-A3A8-424E1BD51524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWASMTutorial.Server", "BlazorWASMTutorial\Server\BlazorWASMTutorial.Server.csproj", "{BA56D304-E015-4395-A3A8-424E1BD51524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASMTutorial.Client", "BlazorWASMTutorial\Client\BlazorWASMTutorial.Client.csproj", "{877B0E2F-F1A4-4B6E-B33E-33960DF09EE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWASMTutorial.Client", "BlazorWASMTutorial\Client\BlazorWASMTutorial.Client.csproj", "{877B0E2F-F1A4-4B6E-B33E-33960DF09EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASMTutorial.Shared", "BlazorWASMTutorial\Shared\BlazorWASMTutorial.Shared.csproj", "{0D98E377-83F4-41AC-AC45-A8A7EEEE9D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWASMTutorial.Shared", "BlazorWASMTutorial\Shared\BlazorWASMTutorial.Shared.csproj", "{0D98E377-83F4-41AC-AC45-A8A7EEEE9D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{CFC2A8BE-265A-446C-924A-D8702E416CA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{CFC2A8BE-265A-446C-924A-D8702E416CA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Models", "Data.Models\Data.Models.csproj", "{CCD5C6F6-109C-44E1-B04E-158FC2121BEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Models", "Data.Models\Data.Models.csproj", "{CCD5C6F6-109C-44E1-B04E-158FC2121BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "Components\Components.csproj", "{ECF09F4D-C513-4695-B25D-5880F01081B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{CCD5C6F6-109C-44E1-B04E-158FC2121BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCD5C6F6-109C-44E1-B04E-158FC2121BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCD5C6F6-109C-44E1-B04E-158FC2121BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF09F4D-C513-4695-B25D-5880F01081B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF09F4D-C513-4695-B25D-5880F01081B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF09F4D-C513-4695-B25D-5880F01081B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF09F4D-C513-4695-B25D-5880F01081B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

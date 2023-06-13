@@ -4,15 +4,11 @@
 
 <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+<CounterCopy @bind-currentCount="currentCount" incrementAmount="@incrementAmount" @bind-currentCount:event="currentCountChanged"/>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<p role="status">The current parent count is @currentCount</p>
 
 @code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+    int incrementAmount = 10;
+    int currentCount = 0;
 }

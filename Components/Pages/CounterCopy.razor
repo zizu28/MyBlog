@@ -1,0 +1,26 @@
+﻿@page "/counterwithparameter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter Copy</h1>
+
+<p role="status">Current copy count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    [Parameter]
+    public int incrementAmount { get; set; } = 1;
+
+    [Parameter]
+    public int currentCount { get; set; } = 0;
+
+    [Parameter]
+    public EventCallback<int> currentCountChanged { get; set; }
+
+    private async Task IncrementCount()
+    {
+        currentCount += incrementAmount;
+        await currentCountChanged.InvokeAsync(currentCount);
+    }
+}
